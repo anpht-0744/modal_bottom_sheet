@@ -132,10 +132,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             )),
                     ListTile(
                         title: Text('Bar Modal'),
-                        onTap: () => showBarModalBottomSheet(
+                        onTap: () => showCupertinoModalBottomSheet(
                               expand: true,
                               context: context,
                               backgroundColor: Colors.transparent,
+                              transitionBackgroundImage: DecorationImage(
+                                  image: AssetImage('assets/mail.png'),
+                                  fit: BoxFit.cover),
                               builder: (context) => ModalInsideModal(),
                             )),
                     ListTile(
